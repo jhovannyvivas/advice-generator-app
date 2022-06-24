@@ -1,0 +1,73 @@
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+    --message-font-size: 28px;
+    --font-weight: 800;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    background: var(--dark-blue);
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 2fr 4fr 4fr;
+}
+
+section {
+    position: relative;
+    background: var(--dark-grayish-blue);
+    border-radius: 10px;
+    margin: 0 20px;
+    padding: 20px 20px 50px;
+
+}
+
+section h5 {
+    text-align: center;
+    color: var(--neon-green);
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+section p {
+    font-size: var(--message-font-size);
+    color: var(--light-cyan);
+    text-align: center;
+    line-height: 36px;
+    font-weight: 500;
+}
+
+.contenedor-dado {
+    position: absolute;
+    background-color: var(--neon-green);
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    bottom: -30px;
+    left: 138px;
+}
+
+footer {
+    align-self: end;
+    padding-bottom: 15px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--light-cyan);
+}
+
+.attribution a {
+    color: var(--neon-green)
+}
