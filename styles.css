@@ -20,16 +20,16 @@ body {
     grid-template-rows: 2fr 4fr 4fr;
 }
 
-section {
+
+.container-message{
     position: relative;
     background: var(--dark-grayish-blue);
     border-radius: 10px;
     margin: 0 20px;
-    padding: 20px 20px 50px;
-
+    padding: 20px 20px 70px;
 }
 
-section h5 {
+.container-message h5 {
     text-align: center;
     color: var(--neon-green);
     font-size: 12px;
@@ -37,7 +37,7 @@ section h5 {
     margin-bottom: 30px;
 }
 
-section p {
+.container-message p {
     font-size: var(--message-font-size);
     color: var(--light-cyan);
     text-align: center;
@@ -45,16 +45,41 @@ section p {
     font-weight: 500;
 }
 
-.contenedor-dado {
+
+.contenedor-imagen {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.movimiento-dado {
+    position: relative;
+}
+
+.contenedor-relative {
     position: absolute;
+    width: 100%;
+    top: -30px;
+}
+
+.centrado-dado {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-dado {
     background-color: var(--neon-green);
     width: 60px;
     height: 60px;
     display: grid;
     place-items: center;
     border-radius: 50%;
-    bottom: -30px;
-    left: 138px;
+    cursor: pointer;
+}
+
+.ocultar_imagen {
+    display: none;
 }
 
 footer {
@@ -70,4 +95,15 @@ footer {
 
 .attribution a {
     color: var(--neon-green)
+}
+
+@media (min-width: 376px) {
+    body {
+        justify-content: center;
+    }
+
+    section {
+        width: 535px; 
+    }
+
 }

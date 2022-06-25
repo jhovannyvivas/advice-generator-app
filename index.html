@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        >
+        <link rel="stylesheet" href="styles.css">
+        <title>Frontend Mentor | Advice generator app</title>
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    </head>
+    <body>
+        <header></header>
+        <section>
+            <div class="container-message">
+                <h5>
+                    ADVICE #
+                    <span id="number"></span>
+                </h5>
+                <p id="advice"></p>
+                <div class="contenedor-imagen">
+                    <img src="./images/pattern-divider-mobile.svg" alt="" class="" id="mobile_image">
+                    <img src="./images/pattern-divider-desktop.svg" alt="" class="ocultar_imagen" id="destop_image">
+                </div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css">
-  <title>Frontend Mentor | Advice generator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
-</head>
-<body>
-  <header></header>
-
-<section>
-  <h5>
-ADVICE #<span id="number"></span> 
-  </h5>
-  <p id="advice">
-
-  </p>
-  <div>
-    <img src="./images/pattern-divider-mobile.svg" alt="">
-  </div>
-  <div class="contenedor-dado" id="dice">
-    
-    <img src="./images/icon-dice.svg" alt="">
-  </div>
-</section>
-  
-
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Hiovani Vivas</a>.
-    </div>
-  </footer>
-  <script src="index.js"></script>
-</body>
+            </div>
+            <div class="movimiento-dado">
+              <div class="contenedor-relative">
+                  <div class="centrado-dado">
+                      <div class="contenedor-dado" id="dice">
+                          <img src="./images/icon-dice.svg" alt="">
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+        <footer>
+            <div class="attribution">
+                Challenge by
+                <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+                . 
+      Coded by
+                <a href="#">Hiovani Vivas</a>
+                .
+            </div>
+        </footer>
+        <script src="index.js"></script>
+    </body>
 </html>
