@@ -53,6 +53,10 @@ body {
 }
 
 
+#destop_image {
+    display: none;
+}
+
 .movimiento-dado {
     position: relative;
 }
