@@ -6,12 +6,19 @@ let number;
 let error = false;
 let permite_click = true;
 
+let id_consejo = null;
+
+
+
+
 const downloadDatos = async () => {
+    dice_element.classList.remove("clase_para_hover");
+    id_consejo = null;
     await fetch('https://api.adviceslip.com/advice')
     .then(resp=> resp.json())
     .then(data=> {
         advice = data.slip.advice;
-        number = data.slip.id;
+        id_consejo = data.slip.id;
     })
     .catch(err=> {
         console.log(err);
@@ -23,10 +30,18 @@ const downloadDatos = async () => {
         error = false;
         permite_click = true;
     } else {
-        console.log(advice);
-        advice_element.innerText = `"${advice}"`;
-        number_element.innerText = number;
-        permite_click = true;
+        if (number !== id_consejo) {
+            console.log(advice);
+            number = id_consejo;
+            advice_element.innerText = `"${advice}"`;
+            number_element.innerText = number;
+            dice_element.classList.add("clase_para_hover");
+            permite_click = true;
+
+        } else {
+            downloadDatos();
+        }
+
     }
 };
 
@@ -38,6 +53,7 @@ const downloadDatos = async () => {
 document.addEventListener("DOMContentLoaded", downloadDatos);
 
 dice_element.addEventListener('click', ()=>{
+
     permite_click = false;
     downloadDatos();
 
